@@ -109,7 +109,7 @@ body
     width: 200px;
     z-index: 9;
     height: 200px;
-    .circle :nth-child(1) i
+    .circle :nth-child(1) i;
 {
     width: 2px;
 }
