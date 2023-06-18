@@ -30,7 +30,7 @@ body
     align-items: center;
     flex-direction: column;
 }
-.analog-clock
+.analogClock
 {
     position: relative;
     width: 350px;
@@ -46,7 +46,7 @@ body
     align-items: center;
     margin-bottom: 30px;
 }
-.analog-clock::before
+.analogClock::before
 {
     /*making a small white circle for pins*/
     content: '';
@@ -58,7 +58,7 @@ body
     border-radius: 50%;
     z-index: 100000;
 }
-.analog-clock span
+.analogClock span
 {
     position: absolute;
     inset: 20px;
@@ -68,7 +68,7 @@ body
     360/12=30deg*/
     transform: rotate(calc(30deg * var(--i)));
 }
-.analog-clock span b
+.analogClock span b
 {
     font-size: 1.60rem;
     opacity: 0.5;
@@ -143,7 +143,7 @@ body
     border-radius: 50%;
     z-index: 8;
 }
-/*digitsl analog-clock styling*/
+/*digitsl analogClock styling*/
 #digitalClock{
     margin-bottom:10px;
     display: flex;
