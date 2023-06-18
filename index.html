@@ -9,9 +9,9 @@
 <body>
     <div class="container">
         <div class="clock">
-            <div class="circle" style="--clr:rgb(3, 254, 3);"><i></i></div>
-            <div class="circle circle2" style="--clr:rgb(255, 251, 0);"><i></i></div>
-            <div class="circle circle3" style="--clr:rgb(249, 0, 25);"><i></i></div>
+            <div class="circle" id="seconds" style="--clr:rgb(3, 254, 3);"><i></i></div>
+            <div class="circle circle2" id="minutes"  style="--clr:rgb(255, 251, 0);"><i></i></div>
+            <div class="circle circle3" id="hours"  style="--clr:rgb(249, 0, 25);"><i></i></div>
             <span style="--i:1;"><b>1</b></span>
             <span style="--i:2;"><b>2</b></span>
             <span style="--i:3;"><b>3</b></span>
@@ -27,7 +27,22 @@
         </div>
     </div>
     <script>
-        
+        var hrs = document.getElementById('hours');
+        let mins = document.querySelector('#minutes');
+        let scs = document.querySelector('#seconds');
+/*----------------------------------
+        setting date and time
+-----------------------------------*/
+        let day = new Date();
+        let hr = day.getHours() * 30;
+        let mns = day.getMinutes() * 6;
+        let sconds = day.getSeconds() * 6;
+/*----------------------------------
+        adding motion to pins
+-----------------------------------*/
+hrs.style.transform = `rotateZ(${hr+(mns/12)}deg)`;
+mins.style.transform = `rotateZ(${mns}deg)`;
+scs.style.transform = `rotateZ(${sconds}deg)`;
     </script>
 </body>
 </html>

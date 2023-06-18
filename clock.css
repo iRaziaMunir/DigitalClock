@@ -106,7 +106,7 @@ body
 {
     position: absolute;
     width: 6px;
-    height: 45%;
+    height: 50%;
     background: var(--clr);
     opacity: 0.5;
     transform-origin: bottom;
