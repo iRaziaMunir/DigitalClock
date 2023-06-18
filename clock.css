@@ -30,7 +30,7 @@ body
     align-items: center;
     flex-direction: column;
 }
-.analogClock
+#analogClock
 {
     position: relative;
     width: 350px;
@@ -46,7 +46,7 @@ body
     align-items: center;
     margin-bottom: 30px;
 }
-.analogClock::before
+#analogClock::before
 {
     /*making a small white circle for pins*/
     content: '';
@@ -58,7 +58,7 @@ body
     border-radius: 50%;
     z-index: 100000;
 }
-.analogClock span
+#analogClock span
 {
     position: absolute;
     inset: 20px;
@@ -68,7 +68,7 @@ body
     360/12=30deg*/
     transform: rotate(calc(30deg * var(--i)));
 }
-.analogClock span b
+#analogClock span b
 {
     font-size: 1.60rem;
     opacity: 0.5;

@@ -7,9 +7,10 @@ setInterval(
         let minutes = timestamp.getMinutes();
         let seconds = timestamp.getSeconds();
 
-        document.querySelector('#hours').style.transform = `rotateZ(${ (hours * 30) + ((minutes * 6) / 12)}deg)`;
-        document.querySelector('#minutes').style.transform = `rotateZ(${minutes * 6}deg)`;
-        document.querySelector('#seconds').style.transform = `rotateZ(${seconds * 6}deg)`;
+        let analogClock = document.querySelector('#analogClock');
+        analogClock.children[0].style.transform = `rotateZ(${seconds * 6}deg)`;
+        analogClock.children[1].style.transform = `rotateZ(${minutes * 6}deg)`;
+        analogClock.children[2].style.transform = `rotateZ(${ (hours * 30) + ((minutes * 6) / 12)}deg)`;
 
         let digitalClock = document.querySelector('#digitalClock');
         digitalClock.children[0].innerHTML = (hours < 10) ? '0' + hours : hours;
