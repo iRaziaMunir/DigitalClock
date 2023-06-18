@@ -7,6 +7,7 @@
     <title>Digital Clock</title>
 </head>
 <body>
+    <!-- analog clock -->
     <div class="container">
         <div class="clock">
             <div class="circle" id="seconds" style="--clr:rgb(3, 254, 3);"><i></i></div>
@@ -25,24 +26,29 @@
             <span style="--i:11"><b>11</b></span>
             <span style="--i:12;"><b>12</b></span>
         </div>
+        <!-- digital clock -->
+        <div id="time">
+            <div id="hour" style="--clr:rgb(249, 0, 25);">00</div>
+            <div id="minute" style="--clr:rgb(255, 251, 0);">00</div>
+            <div id="secnd" style="--clr:rgb(3, 254, 3);">00</div>
+        </div>
     </div>
     <script>
-        var hrs = document.getElementById('hours');
-        let mins = document.querySelector('#minutes');
-        let scs = document.querySelector('#seconds');
-/*----------------------------------
-        setting date and time
------------------------------------*/
-        let day = new Date();
-        let hr = day.getHours() * 30;
-        let mns = day.getMinutes() * 6;
-        let sconds = day.getSeconds() * 6;
-/*----------------------------------
-        adding motion to pins
------------------------------------*/
-hrs.style.transform = `rotateZ(${hr+(mns/12)}deg)`;
-mins.style.transform = `rotateZ(${mns}deg)`;
-scs.style.transform = `rotateZ(${sconds}deg)`;
+    setInterval(()=>{
+        let timestamp = new Date();
+
+        let hours = timestamp.getHours();
+        let minutes = timestamp.getMinutes();
+        let seconds = timestamp.getSeconds();
+
+        document.querySelector('#hours').style.transform = `rotateZ(${ (hours * 30) + ((minutes * 6) / 12)}deg)`;
+        document.querySelector('#minutes').style.transform = `rotateZ(${minutes * 6}deg)`;
+        document.querySelector('#seconds').style.transform = `rotateZ(${seconds * 6}deg)`;
+
+        document.querySelector('#hour').innerHTML = hours;
+        document.querySelector('#minute').innerHTML = minutes;
+        document.querySelector('#secnd').innerHTML = seconds;
+});
     </script>
 </body>
 </html>

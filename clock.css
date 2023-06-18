@@ -28,6 +28,7 @@ body
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 .clock
 {
@@ -142,4 +143,47 @@ body
     
     border-radius: 50%;
     z-index: 8;
+}
+/*digitsl clock styling*/
+#time{
+    margin-bottom:10px;
+    display: flex;
+    padding:10px 20px ;
+    font-weight: 600;
+    font-size: 1.5em;
+    border: 2px solid rgba(0,0,0,0.2);
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px rgba(107, 98, 98, 0.5);
+}
+#time div{
+    position: relative;
+    text-align: center;
+    width: 50px;
+    color:  var(--clr);
+}
+#time div:nth-child(1)::after,
+#time div:nth-child(2)::after{
+    content: ':';
+    position: absolute;
+    right: -4px;
+    color: gray;
+}
+/* #time div:last-child{
+font-size: 0.6em;
+display: flex;
+justify-content: center;
+align-items: center;
+color: #fff;
+} */
+#time div:nth-child(2)::after{
+    animation: animate 1s steps(1) infinite;
+}
+@keyframes animate{
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+
 }
