@@ -168,14 +168,9 @@ body
     right: -4px;
     color: gray;
 }
-/* #digital-clock div:last-child{
-font-size: 0.6em;
-display: flex;
-justify-content: center;
-align-items: center;
-color: #fff;
-} */
-#digital-clock div:nth-child(2)::after{
+#digital-clock div:nth-child(1)::after,
+#digital-clock div:nth-child(2)::after
+{
     animation: animate 1s steps(1) infinite;
 }
 @keyframes animate{
