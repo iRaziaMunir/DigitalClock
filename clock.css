@@ -69,7 +69,7 @@ body
 }
 .clock span b
 {
-    /*style bold numbers*/
+    /*style bold time numbers*/
     font-size: 1.60rem;
     opacity: 0.5;
     font-weight: 600;
@@ -101,7 +101,7 @@ body
     0 0 40px var(--clr);
     z-index: 100000;
 }
-/*style green pin*/
+/*style time pin*/
 .circle i
 {
     position: absolute;
