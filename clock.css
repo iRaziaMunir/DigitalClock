@@ -54,7 +54,7 @@ body
     width: 8px;
     height: 8px;
     background-color:#2f363e;
-    border: 3px solid #fff;
+    border: 3px solid rgb(255, 134, 134);
     border-radius: 50%;
     z-index: 100000;
 }
@@ -62,7 +62,7 @@ body
 {
     position: absolute;
     inset: 20px;
-    color: #fff;
+    color: rgb(255, 255, 255);
     text-align: center;
     /*set variable --i in circular shape
     360/12=30deg*/
@@ -113,17 +113,17 @@ body
     box-shadow: 0 0 8px var(--clr),
     0 0 10px var(--clr);
 }
-/*green pin*/
+/* green pin seconds*/
 .circle:nth-child(1) i
 {
     width: 1px;
 }
-/*yello pin*/
+/*yello pin minutes*/
 .circle2:nth-child(2) i
 {
     width: 3px;
 }
-/*orange pin*/
+/*red pin hours*/
 .circle3:nth-child(3) i
 {
     width: 6px;
