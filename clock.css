@@ -30,7 +30,7 @@ body
     align-items: center;
     flex-direction: column;
 }
-.clock
+.analog-clock
 {
     position: relative;
     width: 350px;
@@ -46,7 +46,7 @@ body
     align-items: center;
     margin-bottom: 30px;
 }
-.clock::before
+.analog-clock::before
 {
     /*making a small white circle for pins*/
     content: '';
@@ -58,7 +58,7 @@ body
     border-radius: 50%;
     z-index: 100000;
 }
-.clock span
+.analog-clock span
 {
     position: absolute;
     inset: 20px;
@@ -68,9 +68,9 @@ body
     360/12=30deg*/
     transform: rotate(calc(30deg * var(--i)));
 }
-.clock span b
+.analog-clock span b
 {
-    /*style bold time numbers*/
+    /*style bold digital-clock numbers*/
     font-size: 1.60rem;
     opacity: 0.5;
     font-weight: 600;
@@ -102,7 +102,7 @@ body
     0 0 40px var(--clr);
     z-index: 100000;
 }
-/*style time pin*/
+/*style digital-clock pin*/
 .circle i
 {
     position: absolute;
@@ -144,8 +144,8 @@ body
     border-radius: 50%;
     z-index: 8;
 }
-/*digitsl clock styling*/
-#time{
+/*digitsl analog-clock styling*/
+#digital-clock{
     margin-bottom:10px;
     display: flex;
     padding:10px 20px ;
@@ -155,27 +155,27 @@ body
     border-radius: 20px;
     box-shadow: 5px 5px 10px rgba(107, 98, 98, 0.5);
 }
-#time div{
+#digital-clock div{
     position: relative;
     text-align: center;
     width: 50px;
     color:  var(--clr);
 }
-#time div:nth-child(1)::after,
-#time div:nth-child(2)::after{
+#digital-clock div:nth-child(1)::after,
+#digital-clock div:nth-child(2)::after{
     content: ':';
     position: absolute;
     right: -4px;
     color: gray;
 }
-/* #time div:last-child{
+/* #digital-clock div:last-child{
 font-size: 0.6em;
 display: flex;
 justify-content: center;
 align-items: center;
 color: #fff;
 } */
-#time div:nth-child(2)::after{
+#digital-clock div:nth-child(2)::after{
     animation: animate 1s steps(1) infinite;
 }
 @keyframes animate{

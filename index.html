@@ -9,7 +9,7 @@
 <body>
     <!-- analog clock -->
     <div class="container">
-        <div class="clock">
+        <div class="analog-clock">
             <div class="circle" id="seconds" style="--clr:rgb(3, 254, 3);"><i></i></div>
             <div class="circle circle2" id="minutes"  style="--clr:rgb(255, 251, 0);"><i></i></div>
             <div class="circle circle3" id="hours"  style="--clr:rgb(249, 0, 25);"><i></i></div>
@@ -26,29 +26,12 @@
             <span style="--i:11"><b>11</b></span>
             <span style="--i:12;"><b>12</b></span>
         </div>
-        <!-- digital clock -->
-        <div id="time">
+        <div id="digital-clock">
             <div id="hour" style="--clr:rgb(249, 0, 25);">00</div>
             <div id="minute" style="--clr:rgb(255, 251, 0);">00</div>
             <div id="secnd" style="--clr:rgb(3, 254, 3);">00</div>
         </div>
     </div>
-    <script>
-    setInterval(()=>{
-        let timestamp = new Date();
-
-        let hours = timestamp.getHours();
-        let minutes = timestamp.getMinutes();
-        let seconds = timestamp.getSeconds();
-
-        document.querySelector('#hours').style.transform = `rotateZ(${ (hours * 30) + ((minutes * 6) / 12)}deg)`;
-        document.querySelector('#minutes').style.transform = `rotateZ(${minutes * 6}deg)`;
-        document.querySelector('#seconds').style.transform = `rotateZ(${seconds * 6}deg)`;
-
-        document.querySelector('#hour').innerHTML = hours;
-        document.querySelector('#minute').innerHTML = minutes;
-        document.querySelector('#secnd').innerHTML = seconds;
-});
-    </script>
+<script src="/clock.js"></script>
 </body>
 </html>
