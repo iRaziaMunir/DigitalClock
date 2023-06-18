@@ -106,28 +106,28 @@ body
 .circle i
 {
     position: absolute;
-    width: 6px;
+    width: 5px;
     height: 50%;
     background: var(--clr);
     transform-origin: bottom;
     transform: scaley(0.5);
-    box-shadow: 0 0 10px var(--clr),
-    0 0 30px var(--clr);
+    box-shadow: 0 0 8px var(--clr),
+    0 0 10px var(--clr);
 }
 /*green pin*/
 .circle:nth-child(1) i
 {
-    width: 2px;
+    width: 1px;
 }
 /*yello pin*/
-.circle3:nth-child(2) i
+.circle2:nth-child(2) i
 {
     width: 3px;
 }
 /*orange pin*/
 .circle3:nth-child(3) i
 {
-    width: 4px;
+    width: 6px;
 }
 .circle2
 {
