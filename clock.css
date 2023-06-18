@@ -70,7 +70,7 @@ body
 .clock span b
 {
     /*style bold numbers*/
-    font-size: 1.90rem;
+    font-size: 1.60rem;
     opacity: 0.5;
     font-weight: 600;
     display: inline-block;
