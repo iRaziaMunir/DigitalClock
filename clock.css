@@ -15,7 +15,7 @@ body
 .container
 {
     position: relative;
-    background-color:#2f363e;
+    background: color #2f363e;;
     /*min-height: 500px;*/
     border-radius: 20px;
     border-top-left-radius: 225px;
@@ -32,8 +32,8 @@ body
 .clock
 {
     position: relative;
-    width: 400px;
-    height: 400px;
+    width: 350px;
+    height: 350px;
     background-color:#2f363e;
     border-radius: 50%;
     box-shadow: 10px 50px 70px rgba(0, 0, 0,0.25);
@@ -43,9 +43,11 @@ body
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 30px;
 }
 .clock::before
 {
+    /*making a small white circle for pins*/
     content: '';
     position: absolute;
     width: 8px;
@@ -53,6 +55,7 @@ body
     background-color:#2f363e;
     border: 3px solid #fff;
     border-radius: 50%;
+    z-index: 100000;
 }
 .clock span
 {
@@ -60,11 +63,14 @@ body
     inset: 20px;
     color: #fff;
     text-align: center;
+    /*set variable --i in circular shape
+    360/12=30deg*/
     transform: rotate(calc(30deg * var(--i)));
 }
 .clock span b
 {
-    font-size: 2em;
+    /*style bold numbers*/
+    font-size: 1.90rem;
     opacity: 0.5;
     font-weight: 600;
     display: inline-block;
@@ -73,52 +79,67 @@ body
 .circle
 {
     position: absolute;
-    width: 250px;
-    height: 250px;
+    width: 230px;
+    height: 230px;
     border: 2px solid rgba(0, 0, 0,0.25);
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: flex-start;
+    z-index: 10;
 }
+/*add colorfull dots above pins*/
+.circle::before
+{
+    content: '';
+    position: absolute;
+    background-color: var(--clr);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    box-shadow: 0 0 20px var(--clr),
+    0 0 40px var(--clr);
+    z-index: 100000;
+}
+/*style green pin*/
 .circle i
 {
     position: absolute;
     width: 6px;
-    height: 50%;
+    height: 45%;
     background: var(--clr);
     opacity: 0.5;
     transform-origin: bottom;
-    transform: scale(0.6);
+    transform: scaley(0.5);
 }
+/*green pin*/
 .circle:nth-child(1) i
 {
     width: 2px;
 }
-.circle:nth-child(2) i
+/*yello pin*/
+.circle3:nth-child(2) i
 {
     width: 6px;
 }
-.circle:nth-child(3) i
+/*orange pin*/
+.circle3:nth-child(3) i
 {
     width: 8px;
 }
 .circle2
 {
     position: absolute;
-    width: 200px;
+    width: 185px;
+    height: 185px;
     z-index: 9;
-    height: 200px;
-    .circle :nth-child(1) i;
-{
-    width: 2px;
-}
 }
 .circle3
 {
     position: absolute;
-    width: 150px;
-    height: 150px;
-    border: 2px solid rgba(0, 0, 0,0.25);
+    width: 140px;
+    height: 140px;
+    
     border-radius: 50%;
+    z-index: 8;
 }
