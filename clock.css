@@ -109,9 +109,10 @@ body
     width: 6px;
     height: 50%;
     background: var(--clr);
-    opacity: 0.5;
     transform-origin: bottom;
     transform: scaley(0.5);
+    box-shadow: 0 0 10px var(--clr),
+    0 0 30px var(--clr);
 }
 /*green pin*/
 .circle:nth-child(1) i
@@ -121,12 +122,12 @@ body
 /*yello pin*/
 .circle3:nth-child(2) i
 {
-    width: 6px;
+    width: 3px;
 }
 /*orange pin*/
 .circle3:nth-child(3) i
 {
-    width: 8px;
+    width: 4px;
 }
 .circle2
 {
@@ -140,7 +141,6 @@ body
     position: absolute;
     width: 140px;
     height: 140px;
-    
     border-radius: 50%;
     z-index: 8;
 }
