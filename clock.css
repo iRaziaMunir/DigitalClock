@@ -150,14 +150,16 @@ body
     padding:10px 20px ;
     font-weight: 600;
     font-size: 1.5em;
-    border: 2px solid rgba(0,0,0,0.2);
-    border-radius: 20px;
-    box-shadow: 5px 5px 10px rgba(107, 98, 98, 0.5);
+    border: none;
+    border-radius: 8px;
+    box-shadow: 5px 15px 30px rgba(0, 0, 0, 0.9);
 }
 #digitalClock div{
     position: relative;
     text-align: center;
+    border: none;
     width: 50px;
+    background: transparent;
     color:  var(--clr);
 }
 #digitalClock div:nth-child(1)::after,
