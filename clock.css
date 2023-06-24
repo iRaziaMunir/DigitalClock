@@ -161,7 +161,7 @@ body
     width: 50px;
     background: transparent;
     color:  var(--clr);
-    text-shadow: 0 0 10px var(--clr), 0 0 10px var(--clr), 0 0 10px var(--clr);
+    text-shadow: 0 0 10px var(--clr), 0 0 50px var(--clr), 0 0 100px var(--clr);
 }
 #digitalClock div:nth-child(1)::after,
 #digitalClock div:nth-child(2)::after{
