@@ -145,7 +145,7 @@ body
 }
 /*digitsl analogClock styling*/
 #digitalClock{
-    margin-bottom:10px;
+    margin-bottom: 25px;
     display: flex;
     padding:10px 20px ;
     font-weight: 600;
@@ -161,6 +161,7 @@ body
     width: 50px;
     background: transparent;
     color:  var(--clr);
+    text-shadow: 0 0 10px var(--clr), 0 0 10px var(--clr), 0 0 10px var(--clr);
 }
 #digitalClock div:nth-child(1)::after,
 #digitalClock div:nth-child(2)::after{
